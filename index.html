@@ -5,14 +5,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Memory Game</h1>
-    <div id="game">
-        <!-- Cards will be inserted here -->
-    </div>
-    <div class="info">
-        <p>Moves: <span id="moves">0</span></p>
-        <button onclick="resetGame()">Restart</button>
-    </div>
     <script src="script.js"></script>
+   <div class="container">
+        <div id="game"> </div>
+        <div class="info-box">
+            <div class="info">
+                <p>Time: <span id="timer">00:00</span></p>
+                <p>Moves: <span id="moves">0</span></p>
+                <p>Score: <span id="score">0</span></p>
+            </div>
+
+          <button onclick="resetGame()">Restart</button>
+        </div>
+    </div>
 </body>
 </html>

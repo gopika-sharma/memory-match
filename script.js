@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-const symbols = ['🦋','💓','🎀','💌', '💟','🎆', '🦩', '🌻', '🌊', '🍄', '🦢'];
+const symbols = ['🦋','💓','🎀','💌', '💟', '🦩', '🌻', '🌊', '🍄', '🦢',];
     let flippedCards = [];
     let moves = 0;
     let canFlip = true;
 
+    
     function initializeGame() {
         const gameContainer = document.getElementById('game');
         if (!gameContainer) {

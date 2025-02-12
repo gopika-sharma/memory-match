@@ -1,9 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family:  sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #ddf0f7;
     min-height: 100vh;
     margin: 0;
     padding: 20px;
@@ -12,51 +12,93 @@ body {
 #game {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    gap: 15px;
     margin: 20px;
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
 }
 
 .card {
-    width: 80px;
-    height: 80px;
-    background-color: #2196F3;
-    color: white;
-    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+    background-color: #cfbbfa;
+    color: #4A4458;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 28px;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: all 0.4s ease;
     user-select: none;
-    border: 2px solid #1976D2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border: none;
+    box-shadow: 0 8px 16px rgba(202, 177, 255, 0.2);
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr))
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(202, 177, 255, 0.3);
 }
 
 .card.flipped {
-    background-color: white;
-    color: black;
+    background-color: #F8F0E5;
+    color: #4A4458;
     transform: rotateY(180deg);
+    box-shadow: 0 4px 12px rgba(248, 240, 229, 0.3);
 }
 
-.info {
-    text-align: center;
+.container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    width: 90%;
+    max-width: 900px;
     margin-top: 20px;
 }
 
+
+.info-box {
+    width: 250px; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(197, 177, 230, 0.15);
+    text-align: center;
+
+}
+
+.info {
+    margin-right: 15px;
+    color: #4A4458;
+}
+
+.info p {
+    margin: 8px 0;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+}
+
 button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #2196F3;
+    background-color: #C5B1E6;
     color: white;
     border: none;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(197, 177, 230, 0.3);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 button:hover {
-    background-color: #1976D2;
+    background-color: #8653dd;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 16px rgba(179, 152, 223, 0.4);
+}
+
+button:active {
+    transform: translateY(1px);
 }
